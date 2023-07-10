@@ -57,4 +57,10 @@ contract Assessment {
         // emit the event
         emit Withdraw(_withdrawAmount);
     }
+
+    function checkOwner()public pure returns(string memory){
+        string memory name="Vaginderpal Singh Brar";
+        return name;
+    }
+}
 }
