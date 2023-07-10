@@ -7,6 +7,12 @@ export default function HomePage() {
   const [account, setAccount] = useState(undefined);
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
+  const [ownerName, setOwnerName] = useState(undefined);
+  const [add, setAdd] = useState(undefined);
+  const [sub, setSub] = useState(undefined);
+  const [mult, setMult] = useState(undefined);
+  const [inputA, setInputA] = useState("");
+  const [inputB, setInputB] = useState("");
 
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const atmABI = atm_abi.abi;
@@ -74,6 +80,44 @@ export default function HomePage() {
       getBalance();
     }
   }
+  const checkOwner = async () => {
+    if (atm) {
+      let owner = await atm.checkOwner();
+      setOwnerName("Vaginderpal Singh Brar");
+    }
+  }
+  const addition = async () => {
+      if (atm) {
+        const a = parseInt(inputA);
+        const b = parseInt(inputB);
+        const answer = await atm.addition(a,b);
+        setAdd(answer);
+      }
+  }  
+  const subtraction = async () => {
+    if (atm) {
+      const a = parseInt(inputA);
+      const b = parseInt(inputB);
+      const answer = await atm.substraction(a,b);
+      setSub(answer);
+    }
+  }
+  const multiplication = async () => {
+    if (atm) {
+      const a = parseInt(inputA);
+      const b = parseInt(inputB);
+      const answer = await atm.multiplication(a,b);
+      setMult(answer);
+    }
+  }
+  const handleInputAChange = (event) => {
+    setInputA(event.target.value);
+  };
+
+  const handleInputBChange = (event) => {
+    setInputB(event.target.value);
+  };
+
 
   const initUser = () => {
     // Check to see if user has Metamask
@@ -99,6 +143,7 @@ export default function HomePage() {
       </div>
     )
   }
+  
 
   useEffect(() => {getWallet();}, []);
 
