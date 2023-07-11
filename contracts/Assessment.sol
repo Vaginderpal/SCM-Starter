@@ -32,8 +32,4 @@ contract Assessment {
         return balances[_address];
     } 
 
-    function checkOwner()public pure returns(string memory){
-        string memory name="Vaginderpal Singh Brar";
-        return name;
-    }
 }
