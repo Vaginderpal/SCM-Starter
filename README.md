@@ -16,7 +16,7 @@ multiply two values
 Please note that the component assumes you have set up and configured MetaMask in your browser.
 
 # usage 
-Crypto ATMs provide a convenient and accessible way for users to buy and sell cryptocurrencies using cash or traditional payment methods. They enable individuals to easily convert between cryptocurrencies and fiat currencies, expanding the adoption and usability of digital assets in the real world.
+Make sure you have Solidity ^0.8.17 installed. Crypto ATMs provide a convenient and accessible way for users to buy and sell cryptocurrencies using cash or traditional payment methods. They enable individuals to easily convert between cryptocurrencies and fiat currencies, expanding the adoption and usability of digital assets in the real world.
 
 # Customization
 You can customize the UI elements, styles, and behavior of the Crypto ATM component according to your project's requirements. Modify the JSX structure, CSS styles, and event handlers to align with your application's design and functionality.
