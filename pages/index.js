@@ -46,7 +46,7 @@ contract.on("Transfer", (from, to, amount, event) => {
 async function getOwnerName() {
   try {
     const result = await contract.getOwnerName();
-    console.log("Vaginderpal Singh Brar:", result);
+    console.log("Owner name:", result);
   } catch (error) {
     console.error("You are not Owner:", error);
   }
